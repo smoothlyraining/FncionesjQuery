@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de jQuery</title>
+    <style>
+        div{
+            height:60px;
+            width:1000px;
+            background-color:grey;
+            margin-bottom:1px;
+        }
+        button,p{
+            display:inline-block;
+        }
+        p{
+            margin-left:100px;
+        }
+        a{
+            margin-left:50px;
+        }
+        button{
+            margin-left:30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#click button').click(function(){
+                $('#click p').addClass('red')
+            })
+            $('#hide button').click(function(){
+                $('#hide p').hide();
+            })
+            $('#show button').click(function(){
+                $('#hide p').show();
+            })
+            $('#toggle button').click(function(){
+                $('#toggle p').toggle();
+            })
+            $('#slideUp button').click(function(){
+                $('#slideUp p').slideUp();
+            })
+            $('#slideDown button').click(function(){
+                $('#slideUp p').slideDown();
+            })
+            $('#slideToggle button').click(function(){
+                $('#slideToggle p').slideToggle();
+            })
+            $('#fadeOut button').click(function(){
+                $('#fadeOut p').fadeOut();
+            })
+            $('#fadeIn button').click(function(){
+                $('#fadeOut p').fadeIn();
+            })
+            $('#before button').click(function(){
+                $('#before p').before("<p>New paragraph created!</p>");
+            })
+            $('#after button').click(function(){
+                $('#after p').after("<p>New paragraph created!</p>");
+            })
+            $('#append button').click(function(){
+                $('#append p').append("<a href='https://www.google.com'>Link to google!</a>");
+            })
+            $('#html button').click(function(){
+                $('#html p').html("<a href='https://www.google.com'>Now it is a link!</a>");
+            })
+            $('#attr button').click(function(){
+                console.log($('a').attr("href"))
+            })
+            $('#val button').click(function(){
+                console.log($('a').val())
+            })
+            $('#text button').click(function(){
+                $('#text p').text("You just changed the text:)!");
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="click">
+            <button>AddClass</button>
+            <p>Click the button to add class 'red' to this paragraph</p>
+        </div>
+        <div id="hide">
+            <button>Hide</button>
+            <p>Click the button to hide this paragraph</p>
+        </div>
+        <div id="show">
+            <button>Show</button>
+            <p>Click the button to show the last paragraph</p>
+        </div>
+        <div id="toggle">
+            <button>Toggle</button>
+            <p>Click the button to hide or show this paragraph</p>
+        </div>
+        <div id="slideUp">
+            <button>Slide Up</button>
+            <p>Click the button to slide up this paragraph</p>
+        </div>
+        <div id="slideDown">
+            <button>Slide Down</button>
+            <p>Click the button to slide down last paragraph</p>
+        </div>
+        <div id="slideToggle">
+            <button>Slide Toggle
+            </button>
+            <p>Click the button to slide down or slide up this paragraph</p>
+        </div>
+        <div id="fadeOut">
+            <button>Fade out</button>
+            <p>Click the button to fade out this paragraph</p>
+        </div>
+        <div id="fadeIn">
+            <button>Fade in</button>
+            <p>Click the button to fade in last paragraph</p>
+        </div>
+        <div id="before">
+            <button>Before</button>
+            <p>Click the button to add a new parragraph before this one</p>
+        </div>
+        <div id="after">
+            <button>After</button>
+            <p>Click the button to add a new paragraph after this one</p>
+        </div>
+        <div id="append">
+            <button>Append</button>
+            <p>Click the button to append a link after this paragraph</p>
+        </div>
+        <div id="html">
+            <button>html</button>
+            <p>Click the button to make this paragraph to be a link</p>
+        </div>
+        <div id="attr">
+            <button>attr</button>
+            <p>Click the button to get the attribute href of the google link</p>
+        </div>
+        <div id="val">
+            <button>Val</button>
+            <p>Click the button to get the value of the google link</p>
+        </div>
+        <div id="text">
+            <button>text</button>
+            <p>Click the button to change the text of this paragraph</p>
+        </div>
+    </div>
+</body>
+</html>
